@@ -11,6 +11,7 @@ public class Cuenta {
 		this.id = id;
 		this.saldoActual = 0;
 		this.tipo = "A";
+		this.propietario=new Cliente();
 	}
 
 	public String getId() {
@@ -48,10 +49,10 @@ public class Cuenta {
 
 	public void imprimir() {
 		System.out.printf( " Id: %s"+
-							" Saldo Actual: %.2f"+
-							" Tipo:%s ",
+							"/ Saldo Actual: %.2f"+
+							"/ Tipo:%s ",
 							id,saldoActual,tipo);
-		System.out.println("Cedula cliente: "+propietario.getCedula());
+		System.out.println("/ Cedula cliente: "+propietario.getCedula());
 	}
 	
 
