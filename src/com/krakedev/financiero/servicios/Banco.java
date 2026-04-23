@@ -21,5 +21,15 @@ public class Banco {
 		nuevaCuenta.setPropietario(cliente);
 		return nuevaCuenta;
 	}
+	public boolean depositar(double monto, Cuenta cuenta) {
+		if(monto>0) {
+			double saldo=cuenta.getSaldoActual();
+			double suma=saldo+monto;
+			cuenta.setSaldoActual(suma);
+			return true;
+		}else {
+			return false;
+		}
+	}
 
 }
